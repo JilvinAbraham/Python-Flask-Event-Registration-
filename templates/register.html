@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/style.css")}}>
+  </head>
+  <body >
+    <h1>Event Registration Form</h1>
+
+    <div class="register" >
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages%}
+          {% for message in messages%}
+            <P style="color:red">{{message}}</P>
+          {%endfor%}
+        {%endif%}
+      {% endwith%}
+
+      <form  action="#" method="POST" enctype="multipart/form-data" >
+
+        <div class="row">
+
+          <div class="column">
+            <label for="">Full Name</label><br><br>
+            <input type="text" name="full_name" value="" placeholder="Enter Your Full Name"><br><br><br>
+
+            <label for="">Mobile Number</label><br><br>
+            <input type="number" name="mob_number" value="" placeholder="Enter Your Mob Number"><br><br><br>
+
+            <label for="">Upload ID Card</label><br><br>
+            <input type="file" id="img" name="id_card" accept="image/*"><br><br><br>
+
+            <input type="submit" name="action" value="Submit">
+            <input type="submit" name="action" value="Preview">
+          </div>
+
+          <div class="column">
+            <label for="">Email</label><br><br>
+            <input type="email" name="email" value="" placeholder="Enter Your Email"><br><br><br>
+
+            <label for="">Registration Type</label><br><br>
+            <select class="" name="reg_type">
+              <option value="Self">Self</option>
+              <option value="Organisation">Organisation</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Others">Others</option>
+
+            </select><br><br><br>
+
+            <label for="">Number Of Tickets</label><br><br>
+            <input type="number" name="num_tickets" value="" placeholder="Enter Number of Tickets"><br><br><br>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

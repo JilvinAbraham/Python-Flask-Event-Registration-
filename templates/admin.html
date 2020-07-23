@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+        {% for i in range(row)%}
+            <label>{{param["full_name"][i]}}</label>
+           <label>"---------"{{    param["email"][i]    }}   </label>
+           <label>"---------"{{param["mob_number"][i]}}</label>
+           <label>"---------"{{param["reg_type"][i]}}</label>
+           <label>"---------"{{param["num_tickets"][i]}}</label><br>
+
+
+        {%endfor%}
+
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+h1{
+  margin-left: 480px;
+}
+.column {
+  float: left;
+  width: 30%;
+}
+
+/* Clear floats after the columns */
+.row{
+  margin-right:50px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.register{
+
+  margin-top: 80px;
+  margin-left: 450px;
+
+}
